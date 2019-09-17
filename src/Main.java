@@ -5,22 +5,19 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		List names = new ArrayList();
-		names.add("kelly");
-		String name = (String) names.get(0);
-		System.out.println(name);
-		names.add(2);
+		// test with variable args
 		
-		List<String> names2 = new ArrayList<String>();
-		names2.add("nelly");
-		String name2 = names2.get(0);
-		System.out.println(name2);
+		String v1 = "hello";
+		String v2 = "there";
+		String v3 = "how";
+		varargsmethod(v1, v2, v3);
+		//test with multiple literal args
+		varargsmethod("are", "you", "good night");
 	}
 	
-	public void varargsmethod(String...strings) {
+	public static void varargsmethod(String...strings) {
 		Integer i = 0;
-		while (i<=strings.length) {
+		while (i < strings.length) {
 			System.out.println("item "+ Integer.toString(i) + " " + strings[i]);
 			i++;
 		}
